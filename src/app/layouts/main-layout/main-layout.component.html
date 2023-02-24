@@ -1,36 +1,37 @@
 <div class="main-layout">
 
   <div class="navbar">
-    <div class="logo">
-      <img src="../../../assets/images/brand/logo-white-small.svg"
-           alt="Logo" />
+    <div class="left-side">
+      <div class="drawer-menu">
+        <i class="fa-thin fa-bars"></i>
+      </div>
+      <div class="brand">
+        <img src="../../../assets/images/brand/brand-white.svg"
+             alt="Logo" />
+      </div>
     </div>
-    <div class="brand">
-      <img src="../../../assets/images/brand/brand-white.svg"
-           alt="Logo" />
-    </div>
-    <div class="profile">
 
+    <div class="right-side">
+      <div class="person">
+        <div class="user">
+          <!-- tiklandiginda loginse profil sayfasina gidecek degilse giris yap sayfasina -->
+          <i class="fa-thin fa-user"></i>
+        </div>
+        <div class="fav">
+          <i class="fa-thin fa-heart"></i>
+        </div>
+        <div class="cart">
+          <i class="fa-thin fa-bag-shopping"></i>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="menu">
-    <div class="tabs">
-      <a>Books</a>
-      <a>Education</a>
-      <a>Stationary</a>
-      <a>Best Seller</a>
+  <div class="layout">
+    <div class="content"
+         id="main-content">
+      <router-outlet></router-outlet>
     </div>
-    <div class="search-bar">
-      <input type="text"
-             placeholder="Search" />
-      <button>Search</button>
-    </div>
-  </div>
-
-  <div class="content"
-       id="main-content">
-    <router-outlet></router-outlet>
   </div>
 
   <div class="footer">

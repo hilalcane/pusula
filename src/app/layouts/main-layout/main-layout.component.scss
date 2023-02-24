@@ -5,56 +5,45 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 90px;
+    height: 70px;
     width: 100%;
     position: absolute;
     top: 0;
     z-index: 9999;
+    padding: 0px 20px;
+    font-size: 18px;
 
-    &:hover {
-      background-color: #2e2c2d;
-    }
+    .left-side {
+      display: flex;
+      align-items: start;
+      gap: 50px;
 
-    .logo {
-      img {
-        height: 100px;
-        width: 120px;
-        rotate: 90deg;
+      .brand {
+        img {
+          height: 40px;
+          filter: invert(1);
+        }
       }
     }
 
-    .brand {
-      img {
-        height: 40px;
+    .right-side {
+      .person {
+        display: flex;
+        gap: 30px;
+        margin-right: 20px;
       }
     }
   }
 
-  .scrolled-navbar {
-    background-color: #2e2c2d;
-  }
-
-  .menu {
-    width: 100%;
-    position: absolute;
-    top: 90px;
-    z-index: 9999;
-    height: 50px;
-    background-color: #2e2c2d;
+  .layout {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
 
-    .search-bar {
-      padding: 30px;
+    .content {
+      width: 100%;
+      height: calc(100vh - 20px);
+      overflow: scroll;
+      overflow-x: hidden;
     }
-  }
-
-  .content {
-    background-color: #d9d9d9;
-    height: calc(100vh - 20px);
-    overflow: scroll;
-    overflow-x: hidden;
   }
 
   .footer {
