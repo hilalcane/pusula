@@ -3,7 +3,18 @@
   <div class="navbar">
     <div class="left-side">
       <div class="drawer-menu">
-        <i class="fa-thin fa-bars"></i>
+        <i class="fa-thin fa-bars"
+           (click)="toggleMenu()"></i>
+        <nz-drawer [nzTitle]="menuDrawerConfig.title"
+                   [nzClosable]="menuDrawerConfig.closable"
+                   [nzVisible]="menuVisibility"
+                   [nzPlacement]="menuDrawerConfig.placement"
+                   [nzWidth]="menuDrawerConfig.width"
+                   (nzOnClose)="toggleMenu()">
+          <ng-container *nzDrawerContent>
+            <app-menu></app-menu>
+          </ng-container>
+        </nz-drawer>
       </div>
       <div class="brand">
         <img src="../../../assets/images/brand/brand-white.svg"
@@ -12,17 +23,32 @@
     </div>
 
     <div class="right-side">
+      <div class="search">
+        <i class="fa-thin fa-magnifying-glass"
+           (click)="toggleSearch()"></i>
+        <nz-drawer [nzTitle]="searchDrawerConfig.title"
+                   [nzClosable]="searchDrawerConfig.closable"
+                   [nzVisible]="searchVisibility"
+                   [nzPlacement]="searchDrawerConfig.placement">
+          <ng-container *nzDrawerContent>
+            <h1>search</h1>
+          </ng-container>
+        </nz-drawer>
+      </div>
       <div class="person">
         <div class="user">
           <!-- tiklandiginda loginse profil sayfasina gidecek degilse giris yap sayfasina -->
           <i class="fa-thin fa-user"></i>
         </div>
+        <label>Profile</label>
         <div class="fav">
           <i class="fa-thin fa-heart"></i>
         </div>
+        <label>Favorites</label>
         <div class="cart">
           <i class="fa-thin fa-bag-shopping"></i>
         </div>
+        <label>Shopping Bag</label>
       </div>
     </div>
   </div>

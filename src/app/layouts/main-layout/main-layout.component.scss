@@ -9,7 +9,7 @@
     width: 100%;
     position: absolute;
     top: 0;
-    z-index: 9999;
+    z-index: 10;
     padding: 0px 20px;
     font-size: 18px;
 
@@ -27,10 +27,18 @@
     }
 
     .right-side {
+      display: flex;
+      gap: 50px;
+
       .person {
         display: flex;
-        gap: 30px;
+        gap: 20px;
+        align-items: baseline;
         margin-right: 20px;
+
+        label {
+          font-size: 13px;
+        }
       }
     }
   }
@@ -49,5 +57,21 @@
   .footer {
     height: 20px;
     background-color: #2e2c2d;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  .navbar {
+    font-size: 14px !important;
+
+    .person {
+      margin-right: 0px !important;
+    }
+  }
+
+  .brand {
+    img {
+      height: 20px !important;
+    }
   }
 }

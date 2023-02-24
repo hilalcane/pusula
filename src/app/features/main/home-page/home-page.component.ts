@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
 
+  searchVisibility = false;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  toggleSearch() {
+    this.searchVisibility = !this.searchVisibility;
+  }
 }

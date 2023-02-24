@@ -7,7 +7,22 @@ import { Component, HostListener, OnChanges, OnInit } from '@angular/core';
 })
 export class MainLayoutComponent implements OnInit, OnChanges {
 
+  menuDrawerConfig: any = {
+    closable: false,
+    placement: 'left',
+    visible: true,
+    width: '45%'
+  }
 
+  searchDrawerConfig: any = {
+    title: 'Search',
+    closable: true,
+    placement: 'top',
+    visible: true
+  }
+
+  menuVisibility = false;
+  searchVisibility = false;
 
   scroll = (event): void => {
     //handle your scroll here
@@ -16,7 +31,6 @@ export class MainLayoutComponent implements OnInit, OnChanges {
     console.log(document.getElementById("main-content").scrollTop);
 
   };
-
 
   constructor() { }
 
@@ -31,5 +45,11 @@ export class MainLayoutComponent implements OnInit, OnChanges {
   ngOnChanges() {
   }
 
+  toggleMenu() {
+    this.menuVisibility = !this.menuVisibility;
+  }
 
+  toggleSearch() {
+    this.searchVisibility = !this.searchVisibility;
+  }
 }
