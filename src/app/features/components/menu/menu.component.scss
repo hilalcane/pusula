@@ -1,0 +1,14 @@
+.menu {
+  .top-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0;
+    list-style: none;
+    transition: 0.3sn;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
