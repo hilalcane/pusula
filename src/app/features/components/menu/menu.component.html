@@ -1,61 +1,12 @@
 <div class="menu">
-  <ul class="top-menu">
-    <li>
-      <a clas>Books</a>
-      <ul *ngIf="submenuVisibility"
-          class="sub-menu">
-        <li>
-          <a>Literature</a>
-        </li>
-        <li>
-          <a>Novel</a>
-        </li>
-        <li>
-          <a>Science</a>
-        </li>
-        <li>
-          <a>Comic Book</a>
-        </li>
-        <li>
-          <a>Kid</a>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <a>Education books</a>
-      <ul *ngIf="submenuVisibility"
-          class="submenu">
-        <li>
-          <a>Computer Books</a>
-        </li>
-        <li>
-          <a>Academic Books</a>
-        </li>
-        <li>
-          <a>High School Books</a>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <a>Stationery</a>
-      <ul *ngIf="submenuVisibility"
-          class="submenu">
-        <li>
-          <a>Pencil</a>
-        </li>
-        <li>
-          <a>Notebooks</a>
-        </li>
-        <li>
-          <a>School Bags</a>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <a>Music</a>
-    </li>
-    <li>
-      <a>Electronics</a>
-    </li>
+  <ul *ngFor="let menuItem of menu let i= index"
+      class="top-menu">
+    <a (click)="toggleMenu(i)">{{ menuItem.topMenu }}</a>
+    <ul *ngIf="submenuVisibility"
+        class="sub-menu">
+      <li>
+        <a *ngFor="let subMenu of menuItem.subMenus let i=index"> {{ subMenu }}</a>
+      </li>
+    </ul>
   </ul>
 </div>
