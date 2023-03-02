@@ -4,6 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
+import { NzDrawerModule } from 'ng-zorro-antd/drawer';
+import { DrawerModule } from './features/components/drawer/drawer.module';
+import { MenuModule } from './features/components/menu/menu.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +15,10 @@ import { MainLayoutComponent } from './layouts/main-layout/main-layout.component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NzDrawerModule,
+    DrawerModule,
+    MenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

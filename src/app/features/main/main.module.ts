@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomePageComponent } from './home-page/home-page.component';
 import { RouterModule, Routes } from '@angular/router';
+import { NzDrawerModule } from 'ng-zorro-antd/drawer';
 
 const mainRoutes: Routes = [
   {
@@ -16,7 +17,8 @@ const mainRoutes: Routes = [
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(mainRoutes)
+    RouterModule.forChild(mainRoutes),
+    NzDrawerModule
   ]
 })
 export class MainModule { }

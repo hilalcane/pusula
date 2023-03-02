@@ -1,0 +1,12 @@
+<div class="menu">
+  <ul *ngFor="let menuItem of menu let i= index"
+      class="top-menu">
+    <a (click)="toggleMenu(i)">{{ menuItem.topMenu }}</a>
+    <ul *ngIf="submenuVisibility"
+        class="sub-menu">
+      <li>
+        <a *ngFor="let subMenu of menuItem.subMenus let i=index"> {{ subMenu }}</a>
+      </li>
+    </ul>
+  </ul>
+</div>
